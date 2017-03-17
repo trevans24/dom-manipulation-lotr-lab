@@ -87,6 +87,7 @@ function makeBuddies() {
   var list = document.createElement('ul');
     for (var i = 0; i < buddies.length; i++) {
         var li = document.createElement('li');
+        li.className = "buddies";
         li.textContent = buddies[i];
         list.appendChild(li);
         aside.appendChild(list);
@@ -101,8 +102,11 @@ makeBuddies();
 
 function beautifulStranger() {
   // change the 'Strider' textnode to 'Aragorn'
+  document.getElementsByClassName('buddies')[3].innerHTML = "Aragorn";
+  //makeBuddies.node.replaceChild('Strider', 'Aragorn');
 }
 
+beautifulStranger();
 
 // Part 6
 
