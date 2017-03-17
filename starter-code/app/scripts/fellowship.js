@@ -33,7 +33,7 @@ function makeMiddleEarth() {
   // inside each article tag include an h1 with the name of the land
     var h1 = document.createElement('h1');
     h1.innerHTML = lands[i];
-    h1.setAttribute('class', lands[i]);
+    article.setAttribute('class', lands[i]);
     article.appendChild(h1);
     middleEarth.appendChild(article);
   // append middle-earth to your document body
@@ -42,8 +42,6 @@ function makeMiddleEarth() {
 }
 
 makeMiddleEarth();
-
-
 // Part 2
 
 function makeHobbits() {
