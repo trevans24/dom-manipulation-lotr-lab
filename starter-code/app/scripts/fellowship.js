@@ -33,6 +33,7 @@ function makeMiddleEarth() {
   // inside each article tag include an h1 with the name of the land
     var h1 = document.createElement('h1');
     h1.innerHTML = lands[i];
+    h1.setAttribute('class', lands[i]);
     article.appendChild(h1);
     middleEarth.appendChild(article);
   // append middle-earth to your document body
@@ -49,6 +50,7 @@ function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
 var list = document.createElement('ul');
+list.setAttribute('class', 'hobbits');
   for (var i = 0; i < hobbits.length; i++) {
     var li = document.createElement('li');
     li.textContent = hobbits[i];
@@ -112,9 +114,13 @@ beautifulStranger();
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
+  var location = document.getElementsByClassName('.Rivendell');
+  var move = document.querySelectorAll('.hobbits');
+  var from = document.getElementsByClassName('.The Shire');
+  location.appendChild(from).removeChild(move);
 }
 
-
+leaveTheShire();
 // Part 7
 
 
