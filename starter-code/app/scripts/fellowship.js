@@ -49,7 +49,7 @@ function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
 var list = document.createElement('ul');
-  for (var i = 0; i <hobbits.length; i++) {
+  for (var i = 0; i < hobbits.length; i++) {
     var li = document.createElement('li');
     li.textContent = hobbits[i];
     li.setAttribute('class', 'hobbit')
@@ -83,9 +83,19 @@ function makeBuddies() {
   // create an aside tag
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
+  var aside = document.createElement('aside');
+  var list = document.createElement('ul');
+    for (var i = 0; i < buddies.length; i++) {
+        var li = document.createElement('li');
+        li.textContent = buddies[i];
+        list.appendChild(li);
+        aside.appendChild(list);
+    }
+        var rivendell = document.querySelectorAll("h1")[1];
+        rivendell.appendChild(aside);
 }
 
-
+makeBuddies();
 // Part 5
 
 
