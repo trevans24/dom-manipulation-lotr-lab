@@ -134,9 +134,9 @@ function forgeTheFellowShip() {
   fellowship.appendChild(buddies);
   var forge = fellowship.querySelectorAll('li');
   // after each character is added make an alert that they have joined your party
-  for (var i = 0; i < forge.length; i++) {
-    alert(forge[i].innerText + " have joined your party");
-  }
+  //for (var i = 0; i < forge.length; i++) {
+   // alert(forge[i].innerText + " have joined your party");
+  //}
 }
 forgeTheFellowShip();
 // Part 8
@@ -144,10 +144,14 @@ forgeTheFellowShip();
 
 function theBalrog() {
   // change the 'Gandalf' textNode to 'Gandalf the White'
+  document.querySelectorAll('li')[4].innerHTML = "Gandalf the White";
   // apply style to the element
   // make the background 'white', add a grey border
+  document.querySelectorAll('li')[4].style.backgroundColor = 'white';
+  document.querySelectorAll('li')[4].style.border = '4px solid grey';
 }
 
+theBalrog();
 
 // Part 9
 
