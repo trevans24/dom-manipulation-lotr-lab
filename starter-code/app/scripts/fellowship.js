@@ -196,7 +196,7 @@ function weWantsIt() {
   var ring = document.getElementById('the-ring');
   gollum.appendChild(ring);
   // Move Gollum into Mount Doom
-  var mountDoom = document.querySelector('mount-doom');
+  var mountDoom = document.getElementById('mount-doom');
   mountDoom.appendChild(gollum);
 }
 
@@ -205,6 +205,13 @@ weWantsIt();
 
 function thereAndBackAgain() {
   // remove Gollum and the Ring from the document
+  var gollum = document.getElementById('gollum');
+  gollum.remove();
   // remove all the baddies from the document
+  buddies.remove();
   // Move all the hobbits back to the shire
+  var shire = document.querySelectorAll('h1')[0];
+  shire.appendChild(hobbits);
 }
+
+thereAndBackAgain();
